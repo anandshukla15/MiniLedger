@@ -1,0 +1,44 @@
+{
+  "name": "miniledger-backend",
+  "version": "1.0.0",
+  "description": "MiniLedger API - Track money lent to friends with mock OTP auth, loans management, summaries and receipt attachments",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "db:migrate": "ts-node-dev src/db/migrate.ts",
+    "db:seed": "ts-node-dev src/db/seed.ts",
+    "test": "jest --runInBand --detectOpenHandles --forceExit"
+  },
+  "keywords": ["miniledger", "loans", "express", "typescript", "postgresql", "otp"],
+  "author": "Anand Shukla",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.13.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/morgan": "^1.9.9",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  }
+}
